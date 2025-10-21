@@ -90,6 +90,11 @@ h1 {
   font-size: 0.875rem;
   cursor: pointer;
 }
+.add-to-cart img {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
 
 @media (max-width: 768px) {
   body {
