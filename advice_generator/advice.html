@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advice Generator App</title>
+
+    <!-- Font (Manrope) -->
+     <link rel="stylesheet" href="advice.css">
+</head>
+<body>
+    <main class="card">
+        <h1 id="advice-id" class="advice-id">Advice #000</h1>
+        <p id="advice-text" class="advice-text">Loading advice...</p>
+        
+        <!--DIVEDER IAMGE-->
+        <img src="pattern-divider-desktop.svg" alt="divder" class="divider">
+
+        <!--Dice Button-->
+        <button id="dice-btn" class="dice-btn" title="Get New advice">
+            <img src="icon-dice.svg" alt="dice icon">
+        </button>
+
+        <!--LOADING DOTS-->
+        <div id="loading" class="loading">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </main>
+    <script src="advice.js"></script>
+</body>
+</html>

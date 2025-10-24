@@ -1,0 +1,140 @@
+/* === load font === */
+@font-face {
+    font-family: 'Manrope' ;
+    src: url('Manrope-ExtraBold.ttf') format ('truetype');
+    font-weight: 800;
+}
+
+
+/*  == Reset and Base == */
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(218, 23%, 16%);
+    font-family: 'Manrope', sans-serif;
+    color: hsl(193, 38%, 86%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* == Card == */
+.card {
+    background-color: hsl(217, 19%, 24%);
+    text-align: center;
+    padding: 45px 40px 70px;
+    border-radius: 50px;
+    max-width: 540px;
+    width: 100%;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    position: relative;   
+}
+
+/*== Advice ID ==*/
+.advice-id {
+    color: hsl(150, 100%, 66%);
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+/* == Advice Text == */
+.advice-text {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    color: hsl(193, 38%, 86%);
+}
+
+/* == Divider == */
+.divider {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+/* == Dice Button == */
+.dice-btn {
+    background-color: hsl(150, 100%, 66%);
+    border: none;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    bottom: -32px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 0.3s, transform 0.2s;
+}
+
+
+.dice-btn:hover {
+    box-shadow: 0 0 40px hsl(150, 100%, 66%);
+}
+
+.dice-btn:active {
+    transform: translateX(-50%) scale(0.95);
+}
+
+/* == Loading Dot Animation == */
+.loading {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top:10px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+    background-color: hsl(150, 100%, 66%);
+    border-radius: 50px;
+    animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+
+.dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+    0%, 80%, 100% {  transform: scale(0); }
+     40% {transform : scale(1)}
+}
+
+/* == Mobile Design == */
+@media (max-width: 480px ) {
+    .card {
+        padding: 35px 20px 60px ;
+        width: 90%;
+    }
+
+    .advice-text {
+        font-size: 22px;
+    }
+
+    .divider {
+        content: url('pattern-divider-mobile.svg');
+    }
+
+    .dice.btn {
+        width: 50px;
+        height: 50px;
+    }
+}
